@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Operators Assignment</title>
+    </head>
+
+    <body>
+        <h1>Operators Assignment</h1>
+        <p>
+            1. Accept two number as an inputs from the user <br>
+            perform the following operations and logs the result: <br>
+            1.add <br>
+            2. sub <br>
+            3. mul <br>
+            4. div <br>
+            5. mod <br>
+            <hr>
+
+            2. Accept two numbers from user <br>
+            Uses comparision operators to check: <br>
+            1.If the fisrt no. is greater than the second <br>
+            2.If the first no. is less than the second <br>
+            3.If both no. are equal <br>
+            <hr>
+
+            3.Write a program to check a student's eligibility for a scholarship
+            based on these conditions: <br>
+            1.The student's score in math should be greater than or equal to 90
+            AND the score in science should be greater than or equal to 85. <br>
+            2. Log whether the student is eligible or not. <br>
+            <hr>
+
+            4.Declare a variable x and assign it an initial value of 10. <br>
+            Perform the following operations using assignment operators and log
+            the result after each step: <br>
+            <ul>
+                <li>Add 5 to x</li>
+                <li>Multiply x by 3</li>
+                <li>substract 10 from x</li>
+                <li>Divid x by 2</li>
+                <li>Find the modulus of x with 3</li>
+            </ul> <br>
+            <hr>
+
+            5.Write a program that calculates and logs the result of the
+            following expressions: <br>
+            <ul>
+                <li>10 + 3 * 5</li>
+                <li>(10 + 3)* 5</li>
+                <li>20 / 2 + 3</li>
+                <li>20 / (2 + 3)</li>
+            </ul>
+            <hr>
+
+            6.Create a program that:
+
+            <ol>
+                <li> Takes the length and width of a rectangle as input.</li>
+                <li>Uses arithmetic operators to calculate: <br>
+                    The perimeter: <br>
+                    2 * (length + width) <br>
+                    The area: length * width </li>
+                <li>Checks if the perimeter is greater than the area using a
+                    comparison operator.</li>
+
+            </ol>
+            <hr>
+
+            7.Write a program that: <br>
+            <ol>
+                <li>Accepts a user's age and citizenship status.</li>
+                <li>Checks if the user is eligible to vote based on these
+                    conditions: <br>
+                    Age is greater than or equal to 18. <br>
+                    Citizenship is true. </li>
+                <li>Use logical AND and NOT operators in the expression.</li>
+            </ol>
+            <hr>
+
+            8. Write a program to calculate the Body Mass Index (BMI) using the
+            formula: <br>
+            <b> BMI = weight (kg) / height² (m²)</b> <br>
+            - Use comparison operators to categorize the BMI: <br>
+            <ul>
+                <li>BMI < 18.5: Underweight</li>
+                <li>18.5 <= BMI < 24.9: Normal weight</li>
+                <li>25 <= BMI < 29.9: Overweight</li>
+                <li>BMI >= 30: Obesity</li>
+
+            </ul>
+            <hr>
+
+            9.Write a program that: <br>
+
+            <ol>
+                <li> Accepts a number from the user.</li>
+                <li>Uses the modulus operator to check if the number is even or
+                    odd.</li>
+                <li>Logs the result.</li>
+            </ol>
+            <hr>
+
+            10.Write a program to calculate the discount on a purchase: <br>
+
+            <ol>
+                <li>If the total amount is greater than $100, apply a 10%
+                    discount.</li>
+                <li>Use assignment operators to update the total amount after
+                    the discount.</li>
+            </ol>
+            <hr>
+
+        </p>
+        <script>
+        // 1.Arithmetic Operations
+
+        n1 = Number(prompt("Enter your first no."));
+        n2 = Number(prompt("Enter your second no."));
+
+        console.log("Addition", n1 + n2);
+        console.log("Sub", n1 - n2);
+        console.log("Mul", n1 * n2);
+        console.log("Div", n1 / n2);
+        console.log("Mod", n1 % n2);
+
+        // 2.Comparison Operators
+
+        console.log("Is first no. greater than second", n1 > n2);
+        console.log("Is first no. less than second", n1 < n2);
+        console.log("Are the two numbers equal?", n1 == n2);
+
+        // 3.Logical Operators
+
+        let math= prompt("Enter the Math score:");
+        let science = prompt("Enter the Science score:");
+
+        let isEligible=(math >= 90 && science >=85);
+        console.log("Student is eligible for the scholarship", isEligible);
+
+        // 4.Assignment Operators
+
+        let x=10;
+        console.log("Initial Value of x=",x );
+
+        x += 5;
+        console.log("After adding 5=",x);
+
+        x *= 3;
+        console.log("After multiplying by 3=",x);
+
+        x -= 10;
+        console.log("After substracting 10=",x);
+
+        x /= 2;
+        console.log("After dividing by 2=",x);
+
+        x %= 3;
+        console.log("Modulus with 3=",x);
+
+        // 5. Operator Precedence
+
+        let exp1 = 10 + 3 * 5;
+        let exp2 = (10 + 3) * 5;
+        let exp3 = 20 / 2 + 3;
+        let exp4 = 20 / (2 + 3);
+
+        console.log("10 + 3 * 5:", exp1);
+        console.log("(10 + 3) * 5:", exp2);
+        console.log("20 / 2 + 3:", exp3);
+        console.log("20 / (2 + 3):", exp4);
+
+        // 6.Combined Example
+
+        let length = parseFloat(prompt("Enter length:"));
+        let width = parseFloat(prompt("Enter width:"));
+
+        let perimeter = 2 * (length + width);
+        let area = length * width;
+
+        console.log("Perimeter:", perimeter);
+        console.log("Area:", area);
+        console.log("Is perimeter greater than area?", perimeter > area);
+
+        // 7.Complex Logical and comparison operations
+        
+        let age = parseInt(prompt("Enter age:"));
+        let isCitizen = prompt("Are you a citizen(true/false)?") ==="true";
+
+        let canVote = (age >=18) && isCitizen;
+        console.log("Eligible to Vote:", canVote);
+        
+        // 8. BMI Calculator
+
+        let weight = parseFloat(prompt("Enter weight (kg):"));
+        let height = parseFloat(prompt("Enter height (m):"));
+
+        let bmi = weight / (height * height);
+        console.log("BMI:", bmi);
+
+        if (bmi < 18.5){
+            console.log("Categpry: Underweight");
+        }else if (bmi >= 18.5 && bmi < 24.9){
+            console.log("Category: Normal weight");
+        }else if(bmi >= 25 && bmi < 29.9){
+            console.log("Category : Overweight");
+        }else{
+            console.log("Category: Obesity");
+        }
+
+
+        // 9.Even or Odd
+
+        let num = parseInt(prompt("Enter a Number:"));
+        if (num % 2 === 0){
+            console.log("The number is even");
+        }else{
+            console.log("The number is odd");
+        }
+
+        // 10.Shopping Discount
+
+        let totalAmount = parseFloat(prompt("Enter Total amount:"));
+
+        if(totalAmount > 100){
+            totalAmount -= totalAmount * 0.1; 
+        }
+        console.log("Discount total:", totalAmount);
+
+
+
+        
+
+
+    </script>
+    </body>
+
+</html>
